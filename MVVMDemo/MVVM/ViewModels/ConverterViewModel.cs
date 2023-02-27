@@ -14,7 +14,7 @@ namespace MVVMDemo.MVVM.ViewModels
         {
             Data = new Data
             {
-                Married = "Yes"
+                Married = "YES"
             };
         }
     }
