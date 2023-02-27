@@ -10,8 +10,11 @@ namespace MVVMDemo.MVVM.ViewModels
     public class CommandsViewModel
     {
         public ICommand ClickCommand =>
-            new Command(() =>
+            new Command(Alert);
+        private void Alert(object obj)
+        {
             App.Current.MainPage
-            .DisplayAlert("Title", "message", "OK"));
+                .DisplayAlert("Title", "Message", "Ok");
+        }
     }
 }
