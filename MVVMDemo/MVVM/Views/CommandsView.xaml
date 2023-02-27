@@ -6,5 +6,11 @@
     <VerticalStackLayout>
         <Button Text="Click Me!"
                 Command="{Binding ClickCommand}"/>
+        <SearchBar
+            x:Name="searchBar"
+            Text="{Binding SearchTerm}"
+            SearchCommand="{Binding SearchCommand}"
+            SearchCommandParameter="{Binding Source={x:Reference searchBar},
+            Path=Text}"/>
     </VerticalStackLayout>
 </ContentPage>
