@@ -9,12 +9,14 @@ namespace MVVMDemo.MVVM.ViewModels
 {
     public class CommandsViewModel
     {
-        public ICommand ClickCommand =>
-            new Command(Alert);
-        private void Alert(object obj)
+        public ICommand ClickCommand { get; }
+        public CommandsViewModel()
         {
-            App.Current.MainPage
-                .DisplayAlert("Title", "Message", "Ok");
+            ClickCommand = new Command(() =>
+            {
+                App.Current.MainPage
+                .DisplayAlert("Title", "Message", "OK");
+            });
         }
     }
 }
